@@ -1,11 +1,11 @@
 <?php get_header(); ?>
-<div class="chat">
+<div class="chat__window">
   <h3 class="chat__title">AIと会話してみよう</h3>
-  <div class="chat__content">
-    <textarea class="chat__input" placeholder="AIに話しかけてみてください"></textarea>
-    <button class="chat__button">送信</button>
+  <div class="chat__messages">
+    <!-- チャットメッセージはここに表示 -->
   </div>
-  <div class="chat__response">
-    <p class="chat__response-text">AIの返答がここに表示されます</p>
-  </div>
+  <form class="chat__input">
+    <input type="text" placeholder="AIに話しかけてみてください"></input>
+    <button type="submit">送信</button>
+  </form>
 </div>
