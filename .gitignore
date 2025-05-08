@@ -14,6 +14,7 @@ wp-config.php
 *.tmp
 debug.log
 error_log
+wp-content/uploads/logs/*.txt
 
 # OS junk files
 .DS_Store
