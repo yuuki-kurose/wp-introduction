@@ -1,0 +1,1178 @@
+ログテスト: 失敗ログテスト: 失敗ログテスト: 失敗
+リクエストエラー: 有効な URL ではありません。
+ログテスト: 失敗
+URL: OPENAI_API_URL
+ログテスト: 失敗
+URL: OPENAI_API_URL
+ログテスト: 失敗
+URL: OPENAI_API_URL
+ログテスト: 失敗
+エラー原因: 有効な URL ではありません。
+ログテスト: 失敗
+エラー原因: 有効な URL ではありません。
+ログテスト: 失敗
+ログテスト: 失敗
+エラー原因: 有効な URL ではありません。
+エラー原因: 有効な URL ではありません。
+URL: OPENAI_API_URL
+エラー原因: 有効な URL ではありません。
+URL: OPENAI_API_URL
+エラー原因: 有効な URL ではありません。
+URL: OPENAI_API_URL
+ログテスト: 失敗
+APIレスポンス: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+APIステータスコード: 429
+APIレスポンス: {
+  "error": {
+    "code": 401,
+    "message": "Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+APIステータスコード: 401
+APIレスポンス: {
+  "error": {
+    "code": 401,
+    "message": "Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+APIステータスコード: 401
+APIレスポンス: {
+  "error": {
+    "code": 401,
+    "message": "Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+APIステータスコード: 401
+APIレスポンス: {
+  "error": {
+    "code": 401,
+    "message": "Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+APIステータスコード: 401
+APIレスポンス: {
+  "error": {
+    "code": 401,
+    "message": "Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+APIステータスコード: 401
+APIレスポンス: {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"content\": Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "description": "Invalid JSON payload received. Unknown name \"content\": Cannot find field."
+          }
+        ]
+      }
+    ]
+  }
+}
+
+APIステータスコード: 400
+APIステータスコード: 400
+APIステータスコード: 200
+APIステータスコード: 200
+APIステータスコード: 200
+APIステータスコード: 200
+APIステータスコード: 200
+APIステータスコード: 200
+APIステータスコード: 200
+リクエストAPIステータスコード: 200
+リクエストAPIステータスコード: 200
+リクエストAPIステータスコード: 200
+リクエストAPIステータスコード: 200
+リクエストAPIステータスコード: 200
+レスポンス: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "こんにちは！\n (Konnichiwa!)\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.32018249034881591
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 2,
+    "candidatesTokenCount": 10,
+    "totalTokenCount": 12,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+リクエストAPIステータスコード: 200
+レスポンス: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "こんにちは！\n(Konnichiwa!)\n\nHow can I help you today?\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.085405389467875167
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 2,
+    "candidatesTokenCount": 18,
+    "totalTokenCount": 20,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 18
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+リクエストAPIステータスコード: 200
+レスポンス: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "こんにちは！\n (Konnichiwa!)\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.31787221431732177
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 2,
+    "candidatesTokenCount": 10,
+    "totalTokenCount": 12,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+リクエストAPIステータスコード: 200
+レスポンス: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "こんにちは！\n(Konnichiwa!)\n\nHow can I help you today?\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.084067013528611928
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 2,
+    "candidatesTokenCount": 18,
+    "totalTokenCount": 20,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 18
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+レスポンスAPIステータスコード: 200
+リクエストAPIステータスコード: 200
+レスポンス: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "こんにちは！\n(Konnichiwa!)\n\nHow can I help you today?\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.081661913130018443
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 2,
+    "candidatesTokenCount": 18,
+    "totalTokenCount": 20,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 18
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+レスポンスAPIステータスコード: 200
+リクエストAPIステータスコード: 200
+レスポンス: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "こんにちは！\n(Konnichiwa!)\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.096904301643371576
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 2,
+    "candidatesTokenCount": 10,
+    "totalTokenCount": 12,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+レスポンスAPIステータスコード: 200
+リクエストAPIステータスコード: 200
+レスポンス: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "こんにちは！\n(Konnichiwa!)  \n\nHow can I help you today?\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.19321324950770327
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 2,
+    "candidatesTokenCount": 19,
+    "totalTokenCount": 21,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 19
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+レスポンスAPIステータスコード: 200
+リクエストAPIステータスコード: 200
+レスポンス: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "こんにちは！\n(Konnichiwa!)\n\nHow can I help you today?\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.085355447398291692
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 2,
+    "candidatesTokenCount": 18,
+    "totalTokenCount": 20,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 18
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+レスポンスAPIステータスコード: 200
+リクエストAPIステータスコード: 200
+レスポンス: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "こんにちは！\n(Konnichiwa!)\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.096904301643371576
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 2,
+    "candidatesTokenCount": 10,
+    "totalTokenCount": 12,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+レスポンスAPIステータスコード: 200
+リクエストAPIステータスコード: 200
+レスポンス: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "こんにちは！\n(Konnichiwa!)\n\nHow can I help you today?\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.083113981617821589
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 2,
+    "candidatesTokenCount": 18,
+    "totalTokenCount": 20,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 18
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+レスポンスAPIステータスコード: 200
+リクエストAPIステータスコード: 200
+レスポンス: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "こんにちは！はい、いい天気ですね！おかげさまで元気です！  あなたも元気そうで何よりです！\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.16736836866898971
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 9,
+    "candidatesTokenCount": 22,
+    "totalTokenCount": 31,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 9
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 22
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+レスポンスAPIステータスコード: 200
+リクエストAPIステータスコード: 200
+レスポンス: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "こんにちは！はい、いい天気ですね！ありがとうございます、元気です！  あなたも元気ですか？\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.1430158257484436
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 9,
+    "candidatesTokenCount": 20,
+    "totalTokenCount": 29,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 9
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 20
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+レスポンスAPIステータスコード: 200
+リクエストAPIステータスコード: 200
+レスポンス: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "こんにちは！そうですね、いい天気ですね！おかげさまで元気です！  あなたも元気そうで何よりです！😊\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.22217847989953082
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 9,
+    "candidatesTokenCount": 23,
+    "totalTokenCount": 32,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 9
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 23
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+レスポンスAPIステータスコード: 200
+リクエストAPIステータスコード: 200
+レスポンス: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "こんにちは！はい、いい天気ですね！ありがとうございます、元気です！  あなたも元気ですか？\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.14578721523284913
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 9,
+    "candidatesTokenCount": 20,
+    "totalTokenCount": 29,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 9
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 20
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+レスポンスAPIステータスコード: 200
+リクエストAPIステータスコード: 200
+レスポンス: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "こんにちは！\n(Konnichiwa!)\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.097924196720123285
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 2,
+    "candidatesTokenCount": 10,
+    "totalTokenCount": 12,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+レスポンスAPIステータスコード: 200
+リクエストAPIステータスコード: 200
+レスポンス: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "こんにちは！はい、おかげさまで元気です！今日は本当に良い天気ですね！☀️  ありがとうございます！\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.087429827451705938
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 11,
+    "candidatesTokenCount": 20,
+    "totalTokenCount": 31,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 11
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 20
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+レスポンスAPIステータスコード: 200
+リクエストAPIステータスコード: 200
+レスポンス: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "こんにちは！はい、今日は良い天気ですね！おかげさまで元気です！  あなたも元気ですか？\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.086416562398274735
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 10,
+    "candidatesTokenCount": 21,
+    "totalTokenCount": 31,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 21
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+レスポンスAPIステータスコード: 200
+リクエストAPIステータスコード: 200
+レスポンス: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "こんにちは！今日は良い天気ですね！ありがとうございます、元気です！  あなたも元気ですか？\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.36868163159019068
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 10,
+    "candidatesTokenCount": 19,
+    "totalTokenCount": 29,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 19
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+レスポンスAPIステータスコード: 200
+リクエストAPIステータスコード: 200
+レスポンス: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "こんにちは！はい、今日は良い天気ですね！おかげさまで元気です！  あなたも元気ですか？\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.090414092654273623
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 10,
+    "candidatesTokenCount": 21,
+    "totalTokenCount": 31,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 21
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+レスポンスAPIステータスコード: 200
+リクエストAPIステータスコード: 200
+レスポンス: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "こんにちは！はい、今日は良い天気ですね！ありがとうございます、元気です！  あなたも元気ですか？\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.078686770938691641
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 10,
+    "candidatesTokenCount": 21,
+    "totalTokenCount": 31,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 21
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+レスポンスAPIステータスコード: 200
+リクエストAPIステータスコード: 200
+レスポンス: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "こんにちは！はい、今日は良い天気ですね！おかげさまで元気です！  あなたも元気ですか？\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.094883379482087638
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 10,
+    "candidatesTokenCount": 21,
+    "totalTokenCount": 31,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 21
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+レスポンスAPIステータスコード: 200
+リクエストAPIステータスコード: 200
+レスポンス: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "こんにちは！はい、今日は良い天気ですね！おかげさまで元気です！  あなたはいかがですか？\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.21766440868377684
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 10,
+    "candidatesTokenCount": 20,
+    "totalTokenCount": 30,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 20
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+レスポンスAPIステータスコード: 200
+リクエストAPIステータスコード: 200
+レスポンス: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "こんにちは！はい、今日は良い天気ですね！おかげさまで元気です！  あなたはいかがお過ごしですか？\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.13071545687588779
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 10,
+    "candidatesTokenCount": 22,
+    "totalTokenCount": 32,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 22
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+レスポンスAPIステータスコード: 200
+リクエストAPIステータスコード: 200
+レスポンス: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "こんにちは！はい、今日は良い天気ですね！おかげさまで元気です！  あなたも元気ですか？\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.086182662418910441
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 10,
+    "candidatesTokenCount": 21,
+    "totalTokenCount": 31,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 21
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+レスポンスAPIステータスコード: 200
+リクエストAPIステータスコード: 200
+レスポンス: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "こんにちは！はい、今日は良い天気ですね！おかげさまで元気です！  あなたも元気ですか？\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.086182662418910441
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 10,
+    "candidatesTokenCount": 21,
+    "totalTokenCount": 31,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 21
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+レスポンスAPIステータスコード: 200
+リクエストAPIステータスコード: 200
+レスポンス: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "こんにちは！はい、今日は良い天気ですね！おかげさまで元気です！  あなたはどうですか？\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.12979756593704223
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 10,
+    "candidatesTokenCount": 20,
+    "totalTokenCount": 30,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 20
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+レスポンスAPIステータスコード: 200
+リクエストAPIステータスコード: 200
+レスポンス: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "こんにちは！はい、今日は良い天気ですね！おかげさまで元気です！  あなたも元気ですか？\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.094883379482087638
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 10,
+    "candidatesTokenCount": 21,
+    "totalTokenCount": 31,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 21
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+レスポンスAPIステータスコード: 200
+リクエストAPIステータスコード: 200
+レスポンス: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "こんにちは！はい、今日はいい天気ですね！おかげさまで元気です！  あなたも元気ですか？\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.18449668657212032
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 10,
+    "candidatesTokenCount": 21,
+    "totalTokenCount": 31,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 21
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+レスポンスAPIステータスコード: 200
+リクエストAPIステータスコード: 200
+リクエストAPIステータスコード: 200
+リクエストAPIステータスコード: 200
+リクエストAPIステータスコード: 200
+リクエストAPIステータスコード: 200
+リクエストAPIステータスコード: 200
+2025-05-08 13:50:38リクエストAPIステータスコード: 200
+2025-05-08 13:53:51リクエストAPIステータスコード: 200
+2025-05-08 14:04:12リクエストAPIステータスコード: 200
+2025-05-08 14:04:12レスポンスAPIステータスコード: 
+2025-05-08 14:05:14リクエストAPIステータスコード: 200
+2025-05-08 14:05:14レスポンスAPIステータスコード: 
+2025-05-08 14:06:26リクエストAPIステータスコード: 200
+2025-05-08 14:06:26レスポンスAPIステータスコード: 
+2025-05-08 14:15:53リクエストステータス: 200
+2025-05-08 14:15:53レスポンスステータス: 200
+2025-05-08 14:19:40リクエストステータス: 200
+2025-05-08 14:19:40レスポンスステータス: 200
+2025-05-08 14:20:35リクエストステータス: 200
+2025-05-08 14:20:35レスポンスステータス: 200
+2025-05-08 14:23:23リクエストステータス: 200
+2025-05-08 14:23:23レスポンスステータス: 200
+2025-05-08 14:23:23レスポンスメッセージ: 
+2025-05-08 14:25:01リクエストステータス: 200
+2025-05-08 14:25:01レスポンスステータス: 200
+2025-05-08 14:25:01レスポンスメッセージ: 
+2025-05-08 14:26:13リクエストステータス: 200
+2025-05-08 14:26:13レスポンスステータス: 200
+2025-05-08 14:26:13レスポンスメッセージ: こんにちは！
+(Konnichiwa!)  Likewise!  How can I help you today?
+
+2025-05-08 14:27:01リクエストステータス: 200
+2025-05-08 14:27:01レスポンスステータス: 200
+2025-05-08 14:28:34リクエストステータス: 200
+2025-05-08 14:28:34レスポンスステータス: 200
+2025-05-08 14:29:01リクエストステータス: 200
+2025-05-08 14:29:01レスポンスステータス: 200
