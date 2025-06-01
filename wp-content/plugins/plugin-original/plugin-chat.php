@@ -14,7 +14,7 @@ function handle_gemini_request() {
     wp_die('No message');
   }
 
-  // chatgpt APIへリクエストを送信
+  // google GEMINI APIへリクエストを送信
   $api_url = GEMINI_API_URL;
   $request_body = wp_remote_post($api_url, [
     'headers' => [
