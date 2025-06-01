@@ -5,6 +5,8 @@
 # Sensitive files
 wp-config.php
 .htaccess
+wp-content/plugins/plugin-original/plugin-chat.php
+wp-content/plugins/plugin-original/plugin-custom-table.php
 
 # Logs and backups
 *.log
