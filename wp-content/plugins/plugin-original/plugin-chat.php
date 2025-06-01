@@ -54,12 +54,18 @@ function handle_gemini_request() {
       file_put_contents($log_file, $log_update_time . "レスポンスステータス: $status_code\n", FILE_APPEND);
       wp_send_json_error('Error: ' . $response_error_message);
     } else {
+      // レスポンスが正常に取得できた場合
       file_put_contents($log_file, $log_update_time . "レスポンスステータス: $status_code\n", FILE_APPEND);
-      $response_message = $response_data['candidates']['0']['content']['parts'][0]['text'];
-      wp_send_json_success($response_message);
+      // リクエストとレスポンスの内容をDBに保存
+      global $wpdb;
+      $table_name = $wpdb->prefix . 'chat_history';
+      $wpdb->insert($table_name, [
+        'user_message' => $message,
+        'ai_response' => $response_data['candidates']['0']['content']['parts'][0]['text'],
+        'created_at' => current_time('mysql')
+      ]);
     }
   }
   wp_die();
 }
 ?>
-
