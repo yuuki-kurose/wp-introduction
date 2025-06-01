@@ -59,11 +59,16 @@ function handle_gemini_request() {
       // リクエストとレスポンスの内容をDBに保存
       global $wpdb;
       $table_name = $wpdb->prefix . 'chat_history';
-      $wpdb->insert($table_name, [
+      $storage_result = $wpdb->insert($table_name, [
         'user_message' => $message,
         'ai_response' => $response_data['candidates']['0']['content']['parts'][0]['text'],
         'created_at' => current_time('mysql')
       ]);
+
+      if($storage_result === false) {
+        // DB保存エラー
+        file_put_contents($log_file, $log_update_time . "DB保存エラー: " . $wpdb->last_error . "\n", FILE_APPEND);
+      }
     }
   }
   wp_die();
