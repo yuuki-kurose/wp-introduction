@@ -13,6 +13,7 @@
 </div>
 
 <script>
+  // リクエスト送信時の処理
   document.getElementById('chat-form').addEventListener('submit', (e) => {
     e.preventDefault();
     // 送信ボタンがクリックされたときの処理
@@ -35,10 +36,14 @@
 
     // リクエスト　チャットメッセージのCSSを制御
     document.getElementById('chat-request').style.display = 'block';
-    // リクエスト テキストを取得・表示する
+    // リクエスト テキストを取得・即画面表示する
     document.getElementById('chat-request').innerHTML = requestHTML;
 
-    // リクエスト テキストをカスタムプラグインに送信・受信する
+    senderRequest(inputText);
+  })
+
+  // 送信イベント プラグインにリクエストを送信する
+  function senderRequest(inputText) {
     fetch('<?php echo admin_url("admin-ajax.php") ?>', {
       method: 'POST',
       headers: {
@@ -52,6 +57,7 @@
     .then(response => response.json())
     .then(data => {
       if(data.success) {
+        const chatData = data.data;
         /**
          * レスポンスを受け取ったときの処理
          */
@@ -62,10 +68,10 @@
 
         // レスポンス チャットメッセージ用のHTMLを生成
         const responseHTML = `
-            <h3 class="chat__response-text">${data.data}</h3>
+            <h3 class="chat__response-text">${chatData.ai_response}</h3>
             <div class="chat__response-detail">
               <p class="chat__response-sender">${responseSender}</p>
-              <p class="chat__response-time">${sendTime}</p>
+              <p class="chat__response-time">${chatData.created_at}</p>
             </div>
         `;
         // レスポンス　チャットメッセージのCSSを制御
@@ -76,5 +82,5 @@
         console.error('Error:', data.data);
       }
     })
-  })
+  }
 </script>
