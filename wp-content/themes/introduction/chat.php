@@ -13,6 +13,7 @@
 </div>
 
 <script>
+  // リクエスト送信時の処理
   document.getElementById('chat-form').addEventListener('submit', (e) => {
     e.preventDefault();
     // 送信ボタンがクリックされたときの処理
@@ -35,10 +36,14 @@
 
     // リクエスト　チャットメッセージのCSSを制御
     document.getElementById('chat-request').style.display = 'block';
-    // リクエスト テキストを取得・表示する
+    // リクエスト テキストを取得・即画面表示する
     document.getElementById('chat-request').innerHTML = requestHTML;
 
-    // リクエスト テキストをカスタムプラグインに送信・受信する
+    senderRequest(inputText);
+  })
+
+  // 送信イベント プラグインにリクエストを送信する
+  function senderRequest(inputText) {
     fetch('<?php echo admin_url("admin-ajax.php") ?>', {
       method: 'POST',
       headers: {
@@ -52,29 +57,52 @@
     .then(response => response.json())
     .then(data => {
       if(data.success) {
-        /**
-         * レスポンスを受け取ったときの処理
-         */
-        // フォーム入力欄を空にする
-        document.getElementById('chat-input').value = '';
-        // レスポンス 送信者
-        const responseSender = 'AI'; // 送信者
-
-        // レスポンス チャットメッセージ用のHTMLを生成
-        const responseHTML = `
-            <h3 class="chat__response-text">${data.data}</h3>
-            <div class="chat__response-detail">
-              <p class="chat__response-sender">${responseSender}</p>
-              <p class="chat__response-time">${sendTime}</p>
-            </div>
-        `;
-        // レスポンス　チャットメッセージのCSSを制御
-        document.getElementById('chat-response').style.display = 'block';
-        // レスポンス テキストを取得・表示する
-        document.getElementById('chat-response').innerHTML = responseHTML;
-      } else {
-        console.error('Error:', data.data);
+        console.log('Response received:', data.data);
       }
     })
-  })
+      // if(data.success) {
+      //   /**
+      //    * レスポンスを受け取ったときの処理
+      //    */
+      //   // フォーム入力欄を空にする
+      //   document.getElementById('chat-input').value = '';
+      //   // レスポンス 送信者
+      //   const responseSender = 'AI'; // 送信者
+
+      //   // レスポンス チャットメッセージ用のHTMLを生成
+      //   const responseHTML = `
+      //       <h3 class="chat__response-text">${data.data}</h3>
+      //       <div class="chat__response-detail">
+      //         <p class="chat__response-sender">${responseSender}</p>
+      //         <p class="chat__response-time">${sendTime}</p>
+      //       </div>
+      //   `;
+      //   // レスポンス　チャットメッセージのCSSを制御
+      //   document.getElementById('chat-response').style.display = 'block';
+      //   // レスポンス テキストを取得・表示する
+      //   document.getElementById('chat-response').innerHTML = responseHTML;
+      // } else {
+      //   console.error('Error:', data.data);
+      // }
+    // })
+  }
+
+  // DBに保存されたチャット履歴を取得する
+  function fetchChatHistory() {
+    fetch('<?php echo admin_url("admin-ajax.php") ?>', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: new URLSearchParams({
+        action: '', // プラグイン側で呼び出すアクション名を指定
+      })
+    })
+      .then(response => response.json())
+      .then(data => {
+        if(data.success) {
+          //　　成功の場合
+        }
+      })
+  }
 </script>
