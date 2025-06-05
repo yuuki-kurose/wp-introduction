@@ -1,5 +1,6 @@
 .chat {
   width: 100%;
+  height: 100vh;
   text-align: center;
 
   /** チャット タイトル部分 **/
@@ -9,7 +10,49 @@
     color: #0073aa;
   }
 
-  /** チャット ブロック全体部分 **/
+  /**
+   * チャット 履歴表示
+   **/
+  .chat__history {
+    display: flex;
+    flex-direction: column;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-inline-start: 0;
+
+    .detail__content {
+      color: #778899;
+      background-color: aliceblue;
+      width: 300px;
+      height: auto;
+      border-radius: 8px;
+      padding: 16px;
+      text-align: left;
+      margin: 8px;
+    }
+
+    .detail__content div {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .user {
+      align-self: flex-start;
+    }
+
+    .ai {
+      align-self: flex-end;
+    }
+
+    .detail__content h3 {
+      font-size: 16px;
+      margin: 0;
+    }
+  }
+
+  /**
+   * チャット 新規表示
+   **/
   .chat__window {
     display: flex;
     flex-direction: column;
@@ -17,6 +60,7 @@
     margin-right: 25%;
     padding-inline-start: 0;
   }
+
   /** チャット リクエストブロック部分 **/
   .chat__window li:first-child {
     align-self: flex-start;
@@ -93,4 +137,9 @@
 /** HTML 要素　 */
 li {
   list-style: none;
+}
+
+p {
+  font-size: 12px;
+  margin: 0;
 }

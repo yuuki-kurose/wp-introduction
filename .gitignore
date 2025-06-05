@@ -7,6 +7,7 @@ wp-config.php
 .htaccess
 wp-content/plugins/plugin-original/plugin-chat.php
 wp-content/plugins/plugin-original/plugin-custom-table.php
+wp-content/plugins/plugin-original/plugin-chat-history.php
 
 # Logs and backups
 *.log
