@@ -1,9 +1,30 @@
 <?php get_header(); ?>
 <div class="chat">
   <h3 class="chat__title">AIと会話してみよう</h3>
+  <!-- チャット履歴表示枠 -->
+  <div class="chat__history detail" id="chat-history">
+    <?php $chat_history = handle_history_request(); ?>
+    <?php for($i = 0; $i < count($chat_history); $i ++) { ?>
+      <div class="detail__content user">
+        <h3><?php echo $chat_history[$i]['user_message']; ?></h3>
+        <div>
+          <p>あなた</p>
+          <p><?php echo $chat_history[$i]['created_at']; ?></p>
+        </div>
+      </div>
+      <div class="detail__content ai">
+        <h3><?php echo $chat_history[$i]['ai_response']; ?></h3>
+        <div>
+          <p>AI</p>
+          <p><?php echo $chat_history[$i]['created_at']; ?></p>
+        </div>
+      </div>
+    <?php }; ?>
+  </div>
+  <!-- 新規チャット表示枠 -->
   <ul class="chat__window">
-    <li class="chat__request" id="chat-request"><!-- ここにリクエストメッセージを表示 --></li>
-    <li class="chat__response" id="chat-response"><!-- ここにAIの応答を表示 --></li>
+    <li class="chat__request" id="chat-request"><!-- ここにユーザーの新規リクエストを表示 --></li>
+    <li class="chat__response" id="chat-response"><!-- ここにAIの新規応答を表示 --></li>
   </ul>
   <!-- フォーム -->
   <form class="chat__input" id="chat-form">
@@ -13,7 +34,9 @@
 </div>
 
 <script>
-  // リクエスト送信時の処理
+  /**
+   * 新規のリクエスト フォームの送信イベント
+   */
   document.getElementById('chat-form').addEventListener('submit', (e) => {
     e.preventDefault();
     // 送信ボタンがクリックされたときの処理
@@ -30,7 +53,7 @@
         <h3 class="chat__request-text">${inputText}</h3>
         <div class="chat__request-detail">
           <p class="chat__request-sender">${sender}</p>
-          <p class="chat__request-time">${sendTime}</@>
+          <p class="chat__request-time">${sendTime}</p>
         </div>
     `;
 
@@ -42,7 +65,10 @@
     senderRequest(inputText);
   })
 
-  // 送信イベント プラグインにリクエストを送信する
+  /**
+   * 新規のリクエスト リクエスト・レスポンスの処理
+   * @param {string} inputText - ユーザーが入力したテキスト
+   */
   function senderRequest(inputText) {
     fetch('<?php echo admin_url("admin-ajax.php") ?>', {
       method: 'POST',
@@ -58,9 +84,6 @@
     .then(data => {
       if(data.success) {
         const chatData = data.data;
-        /**
-         * レスポンスを受け取ったときの処理
-         */
         // フォーム入力欄を空にする
         document.getElementById('chat-input').value = '';
         // レスポンス 送信者
