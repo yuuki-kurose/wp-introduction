@@ -3,7 +3,7 @@
   <h3 class="chat__title">AIと会話してみよう</h3>
   <!-- チャット履歴表示枠 -->
   <div class="chat__history detail" id="chat-history">
-    <?php $chat_history = handle_history_request(); ?>
+    <?php $chat_history = handle_history_request(); // array(10)?>
     <?php for($i = 0; $i < count($chat_history); $i ++) { ?>
       <div class="detail__content user">
         <h3><?php echo $chat_history[$i]['user_message']; ?></h3>
@@ -12,19 +12,30 @@
           <p><?php echo $chat_history[$i]['created_at']; ?></p>
         </div>
       </div>
-      <div class="detail__content ai">
-        <h3><?php echo $chat_history[$i]['ai_response']; ?></h3>
-        <div>
-          <p>AI</p>
-          <p><?php echo $chat_history[$i]['created_at']; ?></p>
+      <?php if($i === count($chat_history) - 1) { ?>
+        <!-- 最新のデータの場合 フォームと被らない表示にする-->
+        <div class="detail__content ai" id="ai" style="margin-bottom: 100px;">
+          <h3><?php echo $chat_history[$i]['ai_response']; ?></h3>
+          <div>
+            <p>AI</p>
+            <p><?php echo $chat_history[$i]['created_at']; ?></p>
+          </div>
         </div>
-      </div>
+      <?php } else { ?>
+        <div class="detail__content ai">
+          <h3><?php echo $chat_history[$i]['ai_response']; ?></h3>
+          <div>
+            <p>AI</p>
+            <p><?php echo $chat_history[$i]['created_at']; ?></p>
+          </div>
+        </div>
+      <?php }; ?>
     <?php }; ?>
   </div>
   <!-- 新規チャット表示枠 -->
   <ul class="chat__window">
     <li class="chat__request" id="chat-request"><!-- ここにユーザーの新規リクエストを表示 --></li>
-    <li class="chat__response" id="chat-response"><!-- ここにAIの新規応答を表示 --></li>
+    <li class="chat__response" id="chat-response" style="margin-bottom: 100px;"><!-- ここにAIの新規応答を表示 --></li>
   </ul>
   <!-- フォーム -->
   <form class="chat__input" id="chat-form">
@@ -56,6 +67,9 @@
           <p class="chat__request-time">${sendTime}</p>
         </div>
     `;
+
+    // 最新の履歴データ下 余白をなくす
+    document.getElementById('ai').style.marginBottom = '0px';
 
     // リクエスト　チャットメッセージのCSSを制御
     document.getElementById('chat-request').style.display = 'block';
