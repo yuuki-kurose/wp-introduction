@@ -46,6 +46,20 @@
 
 <script>
   /**
+   * 初回読み込み時 スクロール位置の制御
+   * チャット履歴の最新のメッセージまでスクロールする
+   */
+  window.onload = () => {
+    const element = document.getElementById('ai').getBoundingClientRect();
+    window.scrollTo({
+      top: element.top + window.pageYOffset,
+      behavior: 'smooth'
+    })
+  };
+</script>
+
+<script>
+  /**
    * 新規のリクエスト フォームの送信イベント
    */
   document.getElementById('chat-form').addEventListener('submit', (e) => {
@@ -77,7 +91,7 @@
     document.getElementById('chat-request').innerHTML = requestHTML;
 
     senderRequest(inputText);
-  })
+  });
 
   /**
    * 新規のリクエスト リクエスト・レスポンスの処理
@@ -111,13 +125,20 @@
               <p class="chat__response-time">${chatData.created_at}</p>
             </div>
         `;
-        // レスポンス　チャットメッセージのCSSを制御
+
+        // レスポンス チャットメッセージのCSSを制御
         document.getElementById('chat-response').style.display = 'block';
         // レスポンス テキストを取得・表示する
         document.getElementById('chat-response').innerHTML = responseHTML;
+        // スクロール位置を最新のAIメッセージに設定
+        const newElement = document.getElementById('chat-response').getBoundingClientRect();
+        window.scrollTo({
+          top: newElement.top + pageYOffset,
+          behavior: 'smooth'
+        });
       } else {
         console.error('Error:', data.data);
       }
     })
-  }
+  };
 </script>
