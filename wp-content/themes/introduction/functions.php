@@ -16,29 +16,38 @@ function add_css_link_files() {
   if(get_query_var('pagename') == 'chat') {
       wp_enqueue_style('chat', get_stylesheet_directory_uri() . '/assets/css/chat.css');
   }
+  // chat-signinページ
+  if(get_query_var('pagename') == 'chat-signin') {
+      wp_enqueue_style('chat-signin', get_stylesheet_directory_uri() . '/assets/css/chat-signin.css');
+  }
 }
 add_action('wp_enqueue_scripts', 'add_css_link_files');
 
-/**
- * カスタムテンプレートリライトルール設定
- */
-function add_rewrite_rules() {
-  // chatページ
-  add_rewrite_rule('chat/?$', 'index.php?pagename=chat', 'top');
-}
-add_action('init', 'add_rewrite_rules');
+add_action('init', function() {
+  add_rewrite_rule('^chat-signin/?$', 'index.php?pagename=chat-signin', 'top');
+  add_rewrite_rule('^chat/?$', 'index.php?pagename=chat', 'top');
+});
+
+add_action('wp', function($wp_query) {
+    $slug = get_query_var('pagename');
+    error_log('現在のスラッグ: ' . $slug);
+});
 
 /**
  * カスタムテンプレート読み込み
  */
-function load_chat_template($template) {
+function load_custom_template($template) {
+  // ログインページ
+  if(get_query_var('pagename') == 'chat-signin') {
+    return get_template_directory() . '/chat-signin.php';
+  }
   // chatページ
   if(get_query_var('pagename') == 'chat') {
-    return locate_template('chat.php');
+    return get_template_directory() . '/chat.php';
   }
   return $template;
 }
-add_filter('template_include', 'load_chat_template');
+add_filter('template_include', 'load_custom_template');
 
 /**
  * クエリ変数の登録
