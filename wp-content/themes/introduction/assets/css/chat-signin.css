@@ -1,14 +1,25 @@
 .login {
   display: flex;
   justify-self: center;
+  background: aliceblue;
+  margin: 24px;
 
   .login__form {
-    border: 1px solid #000000;
-    border-radius: 4px;
     margin: 24px;
 
     .login__container {
       padding: 16px;
     }
+
+    .login__button {
+      display: flex;
+      justify-content: space-between;
+
+      .login__button a {
+        text-decoration: none;
+        color: #000000;
+      }
+    }
   }
 }
+
