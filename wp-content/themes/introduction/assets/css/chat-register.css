@@ -1,0 +1,21 @@
+.register {
+  display: flex;
+  justify-self: center;
+  background: aliceblue;
+  margin: 24px;
+  width: 500px;
+  text-align: center;
+
+  .register__form {
+    margin: 24px;
+
+    .register__container {
+      padding: 16px;
+
+    }
+  }
+}
+
+input {
+  width: 320px;
+}
